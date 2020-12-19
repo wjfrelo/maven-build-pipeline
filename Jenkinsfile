@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         tool(type: 'maven', name: 'my-maven')
       }
@@ -9,7 +9,7 @@ pipeline {
 
     stage('Pull Github') {
       steps {
-        git(url: 'git@github.com:wjfrelo/maven-build-pipeline.git', branch: 'main', credentialsId: '7562e52145921fe8f2eaec2d644c91aae08c9a47', poll: true, changelog: true)
+        git(url: 'git@github.com:wjfrelo/maven-build-pipeline.git', branch: 'main', credentialsId: 'wjfrelo', poll: true, changelog: true)
       }
     }
 
