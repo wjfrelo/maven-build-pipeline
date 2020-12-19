@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        tool(type: 'maven', name: 'my-maven')
+        tool(type: 'MAVEN3.6', name: 'MAVEN3.6')
         tool(name: 'my-maven', type: 'MAVEN3.6')
       }
     }
