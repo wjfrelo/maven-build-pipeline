@@ -9,7 +9,7 @@ pipeline {
 
     stage('Pull Github') {
       steps {
-        git(url: 'git@github.com:wjfrelo/maven-build-pipeline.git', branch: 'main', credentialsId: 'wjfrelo', poll: true, changelog: true)
+        git(url: 'ssh://git@github.com:wjfrelo/maven-build-pipeline.git', branch: 'main', credentialsId: 'wjfrelo', poll: true, changelog: true)
       }
     }
 
